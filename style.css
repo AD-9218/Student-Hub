@@ -1,0 +1,225 @@
+html,body{
+    margin: 0%;
+    font-family: Arial, sans-serif;
+    padding: 0%;
+}
+
+.assignment{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    align-items: center;
+    align-content: center;
+    background-size: cover;                    
+    background-repeat: no-repeat;
+    margin: 0%;                           
+    height: 100vh;
+    border-collapse: collapse;
+}
+
+.h_assignment{
+    border: 3px #090700;
+    border-radius: 30%;
+    align-items: center;
+}
+
+table{
+    border-collapse: collapse;
+    border: 3px white;
+}
+
+.Home{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    background-size: cover;                    
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;              
+    margin: 0%;                           
+    height: 100vh;  
+}
+
+.pro{
+    background-image: url(https://t4.ftcdn.net/jpg/09/27/94/25/360_F_927942540_BwvsR4YD6jftMa83x1cte33wDg7SY6bj.jpg);
+}
+
+.banner{
+    width:100%;
+    height:400px;              
+    background-image:url("https://static.vecteezy.com/system/resources/thumbnails/014/468/621/small/abstract-digital-technology-background-with-concept-security-vector.jpg");
+    background-size:cover;     
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+h1 {
+    margin: 0 auto 18px auto;
+}
+
+.Logo{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #090700;
+    margin-left: 5%;
+    /* margin-top: 200px; */
+    /* display: flex; */
+    align-items: center;
+    /* margin-top: 170px; */
+}
+
+.main{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:20px;
+    white-space: initial;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.main{
+    display: flex;
+    gap: 10px;
+}
+
+.Link{
+    flex: 1;
+    width:20%;
+    height: 1%;
+}
+
+.Link a{
+    display:block;
+    margin:10px 0;
+    font-size:15px;
+}
+
+.paragraph h3{
+    margin-top:0%;
+}
+
+.paragraph{
+    flex: 3;
+    width:80%;
+    border: 3px solid rgb(0, 0, 8);
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(190, 229, 230);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+video{
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    background-color: #33d1d6;
+}
+
+.student_hub{
+    border-radius: 40px;
+    align-items:end;
+    text-align: center;
+    border: 3px solid rgb(0, 0, 8);
+    width:  75%;
+    background-size: cover;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 25%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    margin-top: 0%;
+}
+
+.i{
+   position: relative;
+   top: 80px; 
+}
+
+.Logo:hover{
+    transform: scale(1.1);
+}
+
+a{
+    color: black;          
+    text-decoration:solid; 
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button{
+    height: 35px;
+    width: 160px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 10px;
+    border: 2px black;
+    shape-outside:-moz-element();
+    margin-bottom: 2px;
+    background: #f5f5f4;
+    border: 2px  solid black;
+    padding: 0px;
+    border-radius: 8px;
+    justify-content: flex;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box;
+    text-decoration-color: black;
+    text-align:center;
+}
+
+.table_course{
+    margin-top: 100px;
+}
+
+button:hover{
+    transform: scale(1.05);
+    text-align-last: center;
+    background-image: url("https://img.magnific.com/free-vector/blue-watercolor-texture-design-background_1055-8761.jpg?semt=ais_hybrid&w=740&q=80");
+    
+}
+
+.login_heading{
+    text-align: center;
+    border-radius:0%;
+    shape-outside: margin-box;
+    border: 3px  #090700;
+    background-color: #33d1d6;
+    border-color: #0a0c0c;
+    border-radius: 5%; 
+}
+
+.maini{
+    align-items: center;
+    border: 3px #090700;
+    text-align: center;
+    width: 40%;
+    background-color: rgb(245, 247, 247) ;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 5%;
+    flex-direction: column;
+    margin: 13%;
+    margin-left: 6%;
+}
+
+.but{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5%;
+    margin: 10px;
+    /* background: #0dbbc8; */
+    transform: scale(1.05);
+    text-align-last: center;
+}
+
