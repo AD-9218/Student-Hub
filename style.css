@@ -4,8 +4,94 @@ html,body{
     padding: 0%;
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#eef4ff;
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    width:250px;
+    margin:0 auto 40px;
+    padding:12px;
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#fff;
+    background:linear-gradient(#2f86f6,#0a5fc8);
+    border-radius:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+.sitemap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+/* Small Box */
+.card{
+    width:180px;              /* Small width */
+    min-height:150px;         /* Small height */
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 12px rgba(0,0,0,.18);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    .card h2{
+    background:linear-gradient(#2f86f6,#0a5fc8);
+}
+}
+
+.card ul{
+    list-style:none;
+    padding:12px;
+}
+
+.card ul li{
+    font-size:15px;
+    padding:6px 0;
+    border-left:3px solid #0a5fc8;
+    padding-left:10px;
+    color:#222;
+}
+
+.card ul li:not(:last-child){
+    border-bottom:1px solid #ddd;
+}
+
+@media(max-width:768px){
+    .card{
+        width:160px;
+    }
+
+    .title{
+        width:220px;
+        font-size:28px;
+    }
+}
+
 .assignment{
-    background-image: url(https://media.istockphoto.com/id/959093486/vector/blue-abstract-gradient-mesh-background.jpg?s=612x612&w=0&k=20&c=c6lozNEcfMBlPlZazHJiy4NnviEGkAPPgubKC-9GowI=);
     align-items: center;
     align-content: center;
     background-size: cover;                    
@@ -28,13 +114,7 @@ table{
 }
 
 .Home{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
-    background-size: cover;                    
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;              
-    margin: 0%;                           
-    height: 100vh;  
+    background:linear-gradient(to right,#dbeafe,#bfdbfe);
 }
 
 .pro{
@@ -98,29 +178,20 @@ h1 {
     font-size:15px;
 }
 
-.paragraph h3{
-    margin-top:0%;
-}
-
 .paragraph{
-    flex: 3;
-    width:80%;
+    width:85%;
+    height: 100%;
     border: 3px solid rgb(0, 0, 8);
     border-radius: 10px;
     align-items: center;
     text-align: center;
-    background-color: rgb(190, 229, 230);
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    background-color: rgb(252, 252, 252);
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
-}
+    background:#ffffff;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 
-video{
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    background-color: #33d1d6;
 }
 
 .student_hub{
@@ -128,13 +199,20 @@ video{
     align-items:end;
     text-align: center;
     border: 3px solid rgb(0, 0, 8);
-    width:  75%;
+    width:  85%;
     background-size: cover;
     justify-content: space-between;
     display: flex;
-    margin-left: 25%;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    margin-left: 15%;
     margin-top: 0%;
+    background:#ffffff;
+    box-shadow:0 7px 25px rgba(0,0,0,.15);
+}
+
+footer{
+    color:white;
+    font-size:18px;
+    margin:10px;
 }
 
 .i{
@@ -165,8 +243,10 @@ button{
     font-size: 10px;
     border: 2px black;
     shape-outside:-moz-element();
-    margin-bottom: 2px;
-    background: #f5f5f4;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background:white;
     border: 2px  solid black;
     padding: 0px;
     border-radius: 8px;
@@ -176,6 +256,7 @@ button{
     box-sizing: border-box;
     text-decoration-color: black;
     text-align:center;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.25);
 }
 
 .table_course{
@@ -185,9 +266,13 @@ button{
 button:hover{
     transform: scale(1.05);
     text-align-last: center;
-    background-image: url("https://img.magnific.com/free-vector/blue-watercolor-texture-design-background_1055-8761.jpg?semt=ais_hybrid&w=740&q=80");
-    
+    background:#2563EB;
 }
+
+button:hover a{
+    color:white;
+}
+
 
 .login_heading{
     text-align: center;
@@ -200,17 +285,14 @@ button:hover{
 }
 
 .maini{
-    align-items: center;
-    border: 3px #090700;
-    text-align: center;
-    width: 40%;
-    background-color: rgb(245, 247, 247) ;
-    justify-content: center;
-    border: 3px solid black;
-    border-radius: 5%;
-    flex-direction: column;
-    margin: 13%;
-    margin-left: 6%;
+    width:480px;
+    background:white;
+    border:2px solid black;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    overflow:hidden;
+    margin-left:120px;
 }
 
 .but{
@@ -222,5 +304,105 @@ button:hover{
     /* background: #0dbbc8; */
     transform: scale(1.05);
     text-align-last: center;
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+/* Background */
+.banner{
+    width:100%;
+    min-height:100vh;
+    background-image:url("https://static.vecteezy.com/system/resources/thumbnails/014/468/621/small/abstract-digital-technology-background-with-concept-security-vector.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+/* Login Box */
+.maini{
+    width:500px;
+    background:#ffffff;
+    border:2px solid black;
+    border-radius:20px;
+    overflow:hidden;
+    margin-left:120px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.login_heading{
+    background:#355291;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+.login_heading h2{
+    color:#F8FAFC;
+}
+
+form{
+    padding:35px;
+    text-align:center;
+}
+
+label{
+    font-size:18px;
+    font-weight:bold;
+}
+
+input{
+    width:230px;
+    height:38px;
+    margin-top:8px;
+    border:1px solid #999;
+    border-radius:5px;
+    padding:8px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 5px rgba(37,99,235,.4);
+}
+
+.but{
+    margin-top:20px;
+}
+
+@media (max-width:768px){
+
+    .banner{
+        justify-content:center;
+        padding:20px;
+    }
+
+    .maini{
+        width:90%;
+        margin-left:0;
+    }
+
+    .login_heading h2{
+        font-size:28px;
+    }
+
+    input{
+        width:90%;
+    }
+
+    button{
+        width:90%;
+    }
 }
 
