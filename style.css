@@ -5,13 +5,14 @@ html,body{
 }
 
 .assignment{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREvvnM4H8YRQ0-ZGbRtUnFpOT9By4LDLMDb3TYK51gvAs2BX3qEogcpEY1&s=10);
+    background-image: url(https://media.istockphoto.com/id/959093486/vector/blue-abstract-gradient-mesh-background.jpg?s=612x612&w=0&k=20&c=c6lozNEcfMBlPlZazHJiy4NnviEGkAPPgubKC-9GowI=);
     align-items: center;
     align-content: center;
     background-size: cover;                    
     background-repeat: no-repeat;
     margin: 0%;                           
     height: 100vh;
+    border: 3px #0a0c0c;
     border-collapse: collapse;
 }
 
