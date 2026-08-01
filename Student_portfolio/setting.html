@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="Settings with-sidebar">
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="https://static.vecteezy.com/system/resources/previews/020/274/235/non_2x/student-icon-for-your-website-design-logo-app-ui-free-vector.jpg" alt="Student Hub Logo" class="Logo">
+            <h1>Student Hub</h1>
+        </div>
+        <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="attandence.html">Attendance</a>
+                <a href="courses.html">Courses</a>
+                <a href="assignment.html">Assignment</a>
+                <a href="result.html">Result</a>
+                <a href="profile.html">Profile</a>
+                <a href="event.html">Events</a>
+                <a href="Feedback.html">Feedback</a>
+                <a href="contact.html">Contact</a>
+                <a href="setting.html" class="active">Settings</a>
+                <a href="register.html">Register</a>
+        </nav>
+    </aside>
+
+
 
     <h1 align="center">⚙️ Settings</h1>
 
@@ -24,51 +48,79 @@
 
         <br>
 
-        <fieldset>
-            <legend><b>🎨 Appearance</b></legend>
+     <fieldset>
+    <legend>🎨 <b>Appearance</b></legend>
 
-            <label>Theme:</label><br>
-            <input type="radio" name="theme"> Light
-            <input type="radio" name="theme"> Dark
+    <label>Theme:</label>
+    <div class="radio-group">
+        <label class="radio-item">
+            <input type="radio" name="theme" value="light"> Light
+        </label>
+        <label class="radio-item">
+            <input type="radio" name="theme" value="dark"> Dark
+        </label>
+    </div>
 
-            <br><br>
-
-            <label>Font Size:</label><br>
-            <input type="radio" name="font"> Small
-            <input type="radio" name="font"> Medium
-            <input type="radio" name="font"> Large
-        </fieldset>
-
-        <br>
-
-        <fieldset>
-            <legend><b>🔔 Notifications</b></legend>
-
-            <input type="checkbox"> Attendance Alerts<br>
-            <input type="checkbox"> Assignment Reminders<br>
-            <input type="checkbox"> Event Notifications
-        </fieldset>
-
-        <br>
-
-        <fieldset>
-            <legend><b>🌐 Language</b></legend>
-
-            <select>
-                <option>English</option>
-                <option>Gujarati</option>
-                <option>Hindi</option>
-            </select>
-        </fieldset>
+    <label>Font Size:</label>
+    <div class="radio-group">
+        <label class="radio-item">
+            <input type="radio" name="font" value="small"> Small
+        </label>
+        <label class="radio-item">
+            <input type="radio" name="font" value="medium"> Medium
+        </label>
+        <label class="radio-item">
+            <input type="radio" name="font" value="large"> Large
+        </label>
+    </div>
+</fieldset>
 
         <br>
 
-        <fieldset>
-            <legend><b>🔒 Privacy</b></legend>
+        <!-- 🔔 Notifications Section -->
+<fieldset>
+    <legend><b>🔔 Notifications</b></legend>
 
-            <input type="checkbox"> Show Profile to Others<br>
-            <input type="checkbox"> Hide Email
-        </fieldset>
+    <label class="checkbox-item">
+        <input type="checkbox"> Attendance Alerts
+    </label>
+
+    <label class="checkbox-item">
+        <input type="checkbox"> Assignment Reminders
+    </label>
+
+    <label class="checkbox-item">
+        <input type="checkbox"> Event Notifications
+    </label>
+</fieldset>
+
+<br>
+
+<!-- 🌐 Language Section -->
+<fieldset>
+    <legend><b>🌐 Language</b></legend>
+
+    <select>
+        <option>English</option>
+        <option>Gujarati</option>
+        <option>Hindi</option>
+    </select>
+</fieldset>
+
+<br>
+
+<!-- 🔒 Privacy Section -->
+<fieldset>
+    <legend><b>🔒 Privacy</b></legend>
+
+    <label class="checkbox-item">
+        <input type="checkbox"> Show Profile to Others
+    </label>
+
+    <label class="checkbox-item">
+        <input type="checkbox"> Hide Email
+    </label>
+</fieldset>
 
         <br>
 
@@ -80,13 +132,16 @@
 
             <input type="submit" value="Save Changes">
             <input type="reset" value="Reset">
-            <button type="button">
-                <a href="login_page.html">Logout</a>
-            </button>
+            <input type="button" value="Logout" onclick="location.href='login_page.html'">
         </fieldset>
 
     </form>
 
+    <center>
+        <p>Thank You for Visiting Student Hub ❤️</p>
+        <p>@ 2026 Student Hub </p>
+    </center>
+
 </body>
-<center><p>Thank You for Visiting Student Hub ❤️</p></center>
+
 </html>
