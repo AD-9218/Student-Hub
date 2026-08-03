@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="result with-sidebar">
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="https://static.vecteezy.com/system/resources/previews/020/274/235/non_2x/student-icon-for-your-website-design-logo-app-ui-free-vector.jpg" alt="Student Hub Logo" class="Logo">
+            <h1>Student Hub</h1>
+        </div>
+        <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="attandence.html">Attendance</a>
+                <a href="courses.html">Courses</a>
+                <a href="assignment.html">Assignment</a>
+                <a href="result.html" class="active">Result</a>
+                <a href="profile.html">Profile</a>
+                <a href="event.html">Events</a>
+                <a href="Feedback.html">Feedback</a>
+                <a href="contact.html">Contact</a>
+                <a href="setting.html">Settings</a>
+                <a href="register.html">Register</a>
+        </nav>
+    </aside>
+
+
     <header align="center">
         <h1>
             Result
         </h1>
-    </header>  
-    <label for="SEM" >Semester: </label>
+    </aside>
+    <label for="SEM">Semester: </label>
     <select name="sem" id="SEMESTER">
         <option value="select">select</option>
         <option value="1">1st</option>
@@ -43,26 +67,35 @@
             <td align="center"></td>
             <td align="center">6</td>
         </tr>
-            <td align="center">CEUC102</td>
-            <td align="center">C++ Programming</td>
-            <td align="center"></td>
-            <td align="center">4</td>
+        <td align="center">CEUC102</td>
+        <td align="center">C++ Programming</td>
+        <td align="center"></td>
+        <td align="center">4</td>
         </tr>
-            <td align="center">CEUC101</td>
-            <td align="center">C Programming</td>
-            <td align="center"></td>
-            <td align="center">4</td>
+        <td align="center">CEUC101</td>
+        <td align="center">C Programming</td>
+        <td align="center"></td>
+        <td align="center">4</td>
         </tr>
         </tr>
-            <td align="center">MEUD203</td>
-            <td align="center">Matematics</td>
-            <td align="center"></td>
-            <td align="center">3</td>
+        <td align="center">MEUD203</td>
+        <td align="center">Matematics</td>
+        <td align="center"></td>
+        <td align="center">3</td>
         </tr>
-        </table>
-        <table align="center" width="600" border="1">
-            <td align="center">SGPA: </td>
-            <td align="center">28</td>
-        </table>
+    </table>
+    <table class="sgpa" border="1">
+        <tr>
+            <td>SGPA</td>
+            <td>8.20</td>
+        </tr>
+    </table>
+    <center>
+        <p>Thank You for Visiting Student Hub ❤️</p>
+    </center>
+    <center>
+        <p>@ 2026 Student Hub </p>
+    </center>
 </body>
+
 </html>
