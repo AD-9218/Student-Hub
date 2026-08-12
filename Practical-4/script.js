@@ -34,20 +34,19 @@ document.querySelectorAll("tr").forEach(function (row) {
 
     if (dueCell && status && file) {
 
+        let due = new Date(dueCell.innerText);
         file.addEventListener("change", function () {
 
-            if (this.files.length > 0) {
-
-                status.value = "Submitted";
-                row.style.backgroundColor = "#d4edda";
-
+            if (today <= due ) {
+                if(this.files.length > 0){
+                    status.value = "Submitted";
+                    row.style.backgroundColor = "#d4edda";
+                }
             }
-
         });
 
-        let due = new Date(dueCell.innerText);
 
-        if (today >= due && status.value === "Pending") {
+        if (today > due && status.value === "Pending") {
 
             row.style.backgroundColor = "#f8d7da";
 
