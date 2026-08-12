@@ -945,7 +945,6 @@ form {
     color: white;
 }
 
-/* Responsive Queries */
 @media (max-width: 900px) {
     .sidebar {
         position: static;
