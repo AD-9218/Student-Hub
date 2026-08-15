@@ -61,3 +61,69 @@ document.querySelectorAll("tr").forEach(function (row) {
     }
 
 });
+const table = document.querySelector("table");
+const rows = table.querySelectorAll("tr");
+
+const attendance = {
+    "CSUC201-Lab": [18, 20],
+    "CSUC201-Lecture": [22, 25],
+    "CEUE203-Lab": [16, 18],
+    "CEUE203-Lecture": [20, 22],
+    "ITUE203-Lab": [17, 20],
+    "ITUE203-Lecture": [21, 24],
+    "CEUC102-Lab": [15, 18],
+    "CEUC102-Lecture": [19, 22],
+    "CEUC101-Lab": [18, 20],
+    "CEUC101-Lecture": [23, 25],
+    "MEUD203-Lab": [14, 16],
+    "MEUD203-Lecture": [20, 23]
+};
+
+for (let i = 1; i < rows.length; i++) {
+
+    let course = rows[i].cells[0].innerText.trim();
+    let type = rows[i].cells[1].innerText.trim();
+
+    let key = course + "-" + type;
+
+    if (attendance[key]) {
+
+        let present = attendance[key][0];
+        let total = attendance[key][1];
+
+        let percentage = (present / total * 100).toFixed(1);
+
+        rows[i].cells[2].innerText = present + " / " + total;
+        rows[i].cells[3].innerText = percentage + "%";
+
+        if (percentage >= 75) {
+            rows[i].cells[3].style.color = "green";
+        } else {
+            rows[i].cells[3].style.color = "red";
+        }
+    }
+}
+
+const date = document.querySelector("input[type='date']");
+
+date.addEventListener("change", function () {
+    alert("Attendance date selected: " + this.value);
+});
+
+for (let i = 1; i < rows.length; i++) {
+
+    rows[i].addEventListener("click", function () {
+
+        let course = this.cells[0].innerText;
+        let type = this.cells[1].innerText;
+        let percentage = this.cells[3].innerText;
+
+        alert(
+            "Course: " + course +
+            "\nClass Type: " + type +
+            "\nAttendance: " + percentage
+        );
+    });
+}
+
+console.log("Attendance JavaScript is working");
