@@ -127,3 +127,26 @@ for (let i = 1; i < rows.length; i++) {
 }
 
 console.log("Attendance JavaScript is working");
+
+let form = document.querySelector("form");
+
+if (form) {
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name");
+        let roll = document.getElementById("roll");
+        let email = document.getElementById("email");
+
+        if (name && roll && email) {
+
+            if (name.value === "" || roll.value === "" || email.value === "") {
+                alert("Please fill all required fields.");
+            } 
+            else {
+                alert("Feedback submitted successfully!");
+                form.reset();
+            }
+        }
+    });
+}
