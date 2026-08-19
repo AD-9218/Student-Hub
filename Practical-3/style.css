@@ -422,7 +422,6 @@ form {
 /* Assignments Section */
 .assignment {
     height: 100vh;
-    border: 3px solid #0a0c0c;
 }
 
 .assignment h1,

@@ -1,43 +1,78 @@
-<<<<<<< HEAD<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="../Practical-3/style.css">
 </head>
+
 <body class="banner">
 
-<div class="maini">
+    <div class="maini">
 
-    <div class="login_heading">
-        <h2>Student Hub 👩🏻‍🎓👨🏻‍🎓</h2>
+        <div class="login_heading">
+            <h2>Student Hub 👩🏻‍🎓👨🏻‍🎓</h2>
+        </div>
+
+        <form>
+
+            <div class="Username">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" required>
+            </div>
+
+            <br>
+
+            <div class="Password">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" required>
+            </div>
+
+            <br>
+
+            <div class="but" id="successMessage">
+                <button type="submit">Login</button>
+            </div>
+
+        </form>
+
     </div>
+    <script>
+        let form = document.querySelector("form");
 
-    <form>
+        if (form) {
 
-        <div class="Username">
-            <label for="username">Username</label><br>
-            <input type="text" id="username" required>
-        </div>
+            form.addEventListener("submit", function (event) {
 
-        <br>
+                event.preventDefault();
 
-        <div class="Password">
-            <label for="password">Password</label><br>
-            <input type="password" id="password" required>
-        </div>
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
 
-        <br>
+                if (username === "Student" && password === "1234") {
 
-        <div class="but">
-            <button type="submit">Login</button>
-        </div>
+                    let successMessage = document.getElementById("successMessage");
 
-    </form>
+                    successMessage.innerHTML = "✅ Login Successful!";
+                    successMessage.style.color = "green";
 
-</div>
-<script src="../Practical-4/script.js"></script>
+                    setTimeout(function () {
+                        successMessage.innerHTML = "";
+                    }, 100000);
+                    window.location.href = "index.html";
+
+                } else {
+
+                    alert("Wrong Username or Password");
+
+                }
+
+            });
+
+        }
+    </script>
 </body>
 
 </html>
