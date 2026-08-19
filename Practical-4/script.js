@@ -260,3 +260,15 @@ if (feedbackForm) {
     });
 
 }
+
+let resetButton = settingsForm.querySelector('input[type="reset"]');
+
+if (resetButton) {
+
+    resetButton.addEventListener("click", function () {
+
+        alert("Form has been reset!");
+
+    });
+
+}
