@@ -176,3 +176,42 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         document.getElementById("contactForm").reset();
     }
 });
+
+let registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let roll = document.getElementById("roll").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let semester = document.getElementById("semester").value.trim();
+        let eventName = document.getElementById("event").value;
+        let reason = document.getElementById("reason").value.trim();
+
+        if (
+            name === "" ||
+            roll === "" ||
+            email === "" ||
+            phone === "" ||
+            semester === "" ||
+            eventName === "" ||
+            reason === ""
+        ) {
+
+            alert("⚠️ Please fill all details");
+
+        } else {
+
+            alert("✅ Registration Successful!");
+
+            registerForm.reset();
+        }
+
+    });
+
+}
