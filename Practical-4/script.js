@@ -215,3 +215,48 @@ if (registerForm) {
     });
 
 }
+
+let feedbackForm = document.getElementById("feedbackForm");
+
+if (feedbackForm) {
+
+    feedbackForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let roll = document.getElementById("roll").value.trim();
+        let email = document.getElementById("email").value.trim();
+
+        let feedbackType = document.getElementById("feedbackType").value;
+
+        let rating = document.querySelector(
+            'input[name="rating"]:checked'
+        );
+
+        let suggestions = document.getElementById("suggestions").value.trim();
+        let comments = document.getElementById("comments").value.trim();
+
+
+        if (
+            name === "" ||
+            roll === "" ||
+            email === "" ||
+            feedbackType === "" ||
+            !rating ||
+            suggestions === "" ||
+            comments === ""
+        ) {
+
+            alert("⚠️ Please fill all details");
+
+        } else {
+
+            alert("✅ Feedback submitted successfully!");
+
+            feedbackForm.reset();
+        }
+
+    });
+
+}
