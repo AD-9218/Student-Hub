@@ -9,7 +9,26 @@ document.addEventListener("DOMContentLoaded", function () {
     setupAssignmentPage();
     setupAttendancePage();
     setupResultPage();
+    foremailcheck();
 });
+
+function foremailcheck() {
+    let emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+    let email = document.getElementById("email");
+    let emailError = document.getElementById("emailError");
+
+    email.closest("form").addEventListener("submit", function (event) {
+        if (!emailRegex.test(email.value)) {
+            event.preventDefault();
+            emailError.innerHTML = "Invalid email";
+            emailError.style.color = "red";
+        } else {
+            emailError.innerHTML = "";
+        }
+    });
+}
+
 
 function injectGlobalStyles() {
     const style = document.createElement("style");
@@ -112,11 +131,12 @@ function setupThemeSwitcher() {
     document.body.prepend(btn);
 
     const DARK = {
-        bg: "#162341",       // Deep Slate Background
-        bg2: "#1e293b",      // Card & Sidebar Background
-        bg3: "#334155",      // Input Field Background
-        text: "#f8fafc",     // Off-white Text for sharp readability
-        border: "#334155",   // Subtle borders
+        bg: "#162341",
+        bg2: "#1e293b",
+        bg3: "#334155",
+        text: "#f8fafc",
+
+        border: "#334155",
         link: "#60a5fa"
     };
 
@@ -225,7 +245,6 @@ function setupThemeSwitcher() {
     });
 }
 
-/* ---------- 3. Notification Banner ---------- */
 function setupNotificationBanner() {
     if (sessionStorage.getItem("bannerDismissed") === "true") return;
 
@@ -243,7 +262,6 @@ function setupNotificationBanner() {
     });
 }
 
-/* ---------- 4. Collapsible FAQ (accordion) ---------- */
 function setupFAQ() {
     const faqItems = document.querySelectorAll(".faq-item");
     if (!faqItems.length) return;
@@ -269,7 +287,6 @@ function setupFAQ() {
     });
 }
 
-/* ---------- 5. Modal Popup ---------- */
 function setupModal() {
     const triggers = document.querySelectorAll("[data-modal-target]");
     if (!triggers.length) return;
@@ -295,7 +312,6 @@ function setupModal() {
     });
 }
 
-/* ---------- 6. Image/Content Slider ---------- */
 function setupSlider() {
     const wrapper = document.querySelector(".slider-wrapper");
     if (!wrapper) return;
@@ -344,7 +360,6 @@ function setupSlider() {
     resetTimer();
 }
 
-/* ---------- 7. Assignment Page Logic ---------- */
 function setupAssignmentPage() {
     const statusDropdowns = document.querySelectorAll("table select.status");
     if (!statusDropdowns.length) return;
@@ -354,13 +369,12 @@ function setupAssignmentPage() {
             select.style.color = select.value === "Submitted" ? "#00b894" : "#d63031";
             select.style.fontWeight = "bold";
         }
-        
+
         updateColor();
         select.addEventListener("change", updateColor);
     });
 }
 
-/* ---------- 8. Attendance Page Logic ---------- */
 function setupAttendancePage() {
     const attendanceTable = document.querySelector("body.attandence table");
     if (!attendanceTable) return;
@@ -412,7 +426,6 @@ function setupAttendancePage() {
     }
 }
 
-/* ---------- 9. Updated Result Page Logic ---------- */
 function setupResultPage() {
     const resultTable = document.querySelector("body.result table, .result-table");
     if (!resultTable) return;
@@ -424,7 +437,6 @@ function setupResultPage() {
         const gradeCell = row.querySelector(".grade");
         const statusCell = row.querySelector(".status");
 
-        // Works both with structured class names or standard td columns
         if (marksCell && gradeCell && statusCell) {
             const mark = parseFloat(marksCell.textContent);
 
@@ -452,12 +464,11 @@ function setupResultPage() {
                 statusCell.textContent = status;
                 statusCell.style.color = color;
                 statusCell.style.fontWeight = "bold";
-                
+
                 marksCell.style.color = color;
                 marksCell.style.fontWeight = "bold";
             }
         } else {
-            // Fallback for simple table structures
             const cells = row.querySelectorAll("td");
             if (cells.length > 2) {
                 const mark = parseFloat(cells[2].textContent);
@@ -470,9 +481,7 @@ function setupResultPage() {
     });
 }
 
-/* ---------- Result Page Logic ---------- */
 function setupResultPage() {
-    // Result table sodho
     const resultRows = document.querySelectorAll(".result-table tbody tr, body.result table tbody tr");
     if (!resultRows.length) return;
 
@@ -481,16 +490,14 @@ function setupResultPage() {
         const gradeCell = row.querySelector(".grade");
         const statusCell = row.querySelector(".status");
 
-        // Jo class names .marks, .grade, .status HTML ma hoy
         if (marksCell && gradeCell && statusCell) {
             const mark = parseFloat(marksCell.textContent);
 
             if (!isNaN(mark)) {
                 let grade = "F";
                 let status = "Fail";
-                let color = "#ef4444"; // Red for Fail
+                let color = "#ef4444";
 
-                // Grade Rule
                 if (mark >= 90) {
                     grade = "A+"; status = "Pass"; color = "#10b981"; // Green
                 } else if (mark >= 80) {
@@ -503,7 +510,6 @@ function setupResultPage() {
                     grade = "D"; status = "Pass"; color = "#eab308"; // Yellow
                 }
 
-                // Dynamic Values set karo
                 gradeCell.textContent = grade;
                 gradeCell.style.color = color;
                 gradeCell.style.fontWeight = "bold";
