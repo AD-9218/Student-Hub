@@ -42,7 +42,7 @@
         <input type="file" id="imageInput" accept="image/*"><br><br>
         
     <label for="text">Name</label><br>
-    <input type="text" placeholder="Enter your name"><br><br>
+    <input type="text" id="studentName" placeholder="Enter your name"><br><br>
     
     <label>Choose your Gender :</label>
 
@@ -58,13 +58,13 @@
 </div>
     
     <label for="text">Student Id :</label>
-    <input type="text" placeholder="Enter your Id"><br><br>
+    <input type="text" id="studentId" placeholder="Enter your Id"><br><br>
     
     <label for="text">Moblie Number :</label>
-    <input type="text" placeholder="Enter your mobile number"><br><br>
+    <input type="text" id="mobileNumber" placeholder="Enter your mobile number"><br><br>
     
     <label for="text">School/College Name :</label>
-    <input type="text" placeholder="Enter college/school name"><br><br>
+    <input type="text" id="collegeName" placeholder="Enter college/school name"><br><br>
     
     <label for="text">Brance :</label><br>
     <select id="branch" name="branch">
@@ -79,7 +79,7 @@
     </select><br><br>
 
     <label for="">Adress :</label><br>
-    <textarea type="text" rows="4" cols="30" placeholder="Enter your Adress"></textarea><br><br>
+    <textarea id="address" rows="4" cols="30" placeholder="Enter your Adress"></textarea><br><br>
 
     <label>Hobbies :</label>
 
@@ -90,10 +90,34 @@
     <label><input type="checkbox"> Traveling</label>
     <label><input type="checkbox"> Gaming</label>
 </div>
-    
+    <button type="submit">Submit</button>
     </form>
-
 </div>
+
+<div id="studentData"></div>
+
+<script>
+fetch('../Practical-6/student.json')
+  .then(response => response.json())
+  .then(students => {
+
+    const student = students[0];
+
+    document.getElementById('studentName').value = student.name;
+    document.getElementById('studentId').value = student.id;
+    document.getElementById('mobileNumber').value = student.mobile;
+    document.getElementById('collegeName').value = student.college;
+    document.getElementById('branch').value = student.branch;
+    document.getElementById('address').value = student.address;
+
+  })
+  .catch(error => {
+    console.log(error);
+    document.getElementById('studentData').textContent =
+      "Failed to fetch";
+  });
+</script>
+
     <center><p>Thank You for Visiting Student Hub ❤️</p></center>
     <center><p>@ 2026 Student Hub </p></center>
     <script src="../Practical-4/script.js"></script>
