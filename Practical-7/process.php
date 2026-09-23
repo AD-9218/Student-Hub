@@ -17,28 +17,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $data = [
-        "name" => $name,
-        "gender" => $gender,
-        "student_id" => $student_id,
-        "mobile" => $mobile,
-        "college" => $college,
-        "branch" => $branch,
-        "address" => $address,
-        "hobbies" => implode(", ", $hobbies)
-    ];
+    $file = "student.csv";
 
-    $file = "students.json";
+    $fileExists = file_exists($file);
+    $handle = fopen($file, "a");
 
-    $students = [];
+    if ($handle) {
 
-    if (file_exists($file)) {
-        $students = json_decode(file_get_contents($file), true) ?? [];
-    }
+        if (!$fileExists || filesize($file) == 0) {
+            fputcsv($handle, [
+                "Name",
+                "Gender",
+                "Student ID",
+                "Mobile",
+                "College",
+                "Branch",
+                "Address",
+                "Hobbies"
+            ]);
+        }
 
-    $students[] = $data;
+        fputcsv($handle, [
+            $name,
+            $gender,
+            $student_id,
+            $mobile,
+            $college,
+            $branch,
+            $address,
+            implode(", ", $hobbies)
+        ]);
 
-    if (file_put_contents($file, json_encode($students, JSON_PRETTY_PRINT))) {
+        fclose($handle);
 
         echo "<h1>Form Submitted Successfully!</h1>";
 
@@ -53,8 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              (!empty($hobbies) ? implode(", ", $hobbies) : "None") .
              "</p>";
 
+        echo "<p>Data saved successfully in students.csv</p>";
+
     } else {
-        echo "<h2>Error: Data could not be saved.</h2>";
+        echo "<h2>Error: CSV file could not be opened.</h2>";
     }
 
 } else {
