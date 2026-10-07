@@ -22,7 +22,6 @@ if (strlen($password) < 8) {
     exit("Password must be at least 8 characters.");
 }
 
-/* Check duplicate username or email */
 $stmt = $conn->prepare(
     "SELECT id FROM users WHERE username = ? OR email = ?"
 );
@@ -39,13 +38,11 @@ if ($stmt->num_rows > 0) {
 
 $stmt->close();
 
-/* Hash password */
 $hashedPassword = password_hash(
     $password,
     PASSWORD_DEFAULT
 );
 
-/* Insert user */
 $stmt = $conn->prepare(
     "INSERT INTO users (username, email, password)
      VALUES (?, ?, ?)"
