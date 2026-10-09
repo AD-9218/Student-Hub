@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login Page</title>
+
     <link rel="stylesheet" href="../Practical-3/style.css">
 </head>
 
@@ -16,18 +18,42 @@
             <h2>Student Hub 👩🏻‍🎓👨🏻‍🎓</h2>
         </div>
 
-        <form>
+        <form action="../Practical-10/login.php" method="POST">
 
             <div class="Username">
-                <label for="username">Username</label><br>
-                <input type="text" id="username" required>
+                <label for="email">Email</label><br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
             </div>
 
             <br>
 
             <div class="Password">
                 <label for="password">Password</label><br>
-                <input type="password" id="password" required>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required>
+            </div>
+
+            <br>
+
+            <div class="Role">
+                <label for="role">Login As</label><br>
+
+                <select id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="admin">Admin</option>
+                </select>
             </div>
 
             <br>
@@ -39,40 +65,7 @@
         </form>
 
     </div>
-    <script>
-        let form = document.querySelector("form");
 
-        if (form) {
-
-            form.addEventListener("submit", function (event) {
-
-                event.preventDefault();
-
-                let username = document.getElementById("username").value;
-                let password = document.getElementById("password").value;
-
-                if (username === "Student" && password === "1234") {
-
-                    let successMessage = document.getElementById("successMessage");
-
-                    successMessage.innerHTML = "✅ Login Successful!";
-                    successMessage.style.color = "green";
-
-                    setTimeout(function () {
-                        successMessage.innerHTML = "";
-                    }, 100000);
-                    window.location.href = "index.html";
-
-                } else {
-
-                    alert("Wrong Username or Password");
-
-                }
-
-            });
-
-        }
-    </script>
 </body>
 
 </html>
