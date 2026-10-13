@@ -1,0 +1,64 @@
+body {
+font-family: Arial, sans-serif;
+background: #f4f6f8;
+margin: 0;
+padding: 30px;
+}
+.container, .form-container {
+max-width: 1100px;
+margin: auto;
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.form-container { max-width: 500px; }
+h1 { text-align: center; }
+.top-actions { margin-bottom: 20px; }
+.btn, button {
+display: inline-block;
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+background: #333;
+color: white;
+text-decoration: none;
+cursor: pointer;
+}
+.secondary { background: #555; }
+.filter-form {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+}
+input, select {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.filter-form input { min-width: 280px; }
+.clear { padding: 10px; text-decoration: none; }
+table { width: 100%; border-collapse: collapse; }
+th, td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+th { background: #eee; }
+.message {
+background: #e5f6e5;
+padding: 10px;
+margin-bottom: 15px;
+}
+.error {
+background: #ffe5e5;
+padding: 10px;
+margin-bottom: 15px;
+}
+.form-container form {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.form-container button { margin-top: 10px; }
