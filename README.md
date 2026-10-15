@@ -1,265 +1,139 @@
-# 🎓 Student Hub
-
-A responsive **Student Hub Website** developed using **HTML5, CSS3, JavaScript, JSON, PHP, MySQL, and MySQLi**. This project provides students with an easy-to-use interface to manage academic activities such as attendance, courses, assignments, results, profile information, events, feedback, registration, and student data.
-
----
-
-## 🌟 Features
-
-* 🏠 Home Page
-* 📊 Dashboard
-* 📅 Attendance Management
-* 📚 Courses
-* 📝 Assignments
-* 📄 Results
-* 👤 Student Profile
-* 📝 User Registration
-* 🔐 Login Page
-* 📞 Contact Page
-* ⚙️ Settings
-* 💬 Feedback
-* 📅 Events
-* 🔍 Search Functionality
-* 🌙 Dark/Light Theme
-* 📱 Responsive Design
-* 🔄 Dynamic Data Handling using JSON
-* 🖥️ Server-side Processing using PHP
-* 💾 MySQL Database Integration
-* 🔗 MySQLi Database Connection
-* ✅ Frontend and Backend Form Validation
-* 🔐 Password Hashing
-* 🚫 Duplicate Username and Email Checking
-* 💾 Student Data Management
-
----
-
-## 🛠️ Technologies Used
-
-* **HTML5** – Structure of the website
-* **CSS3** – Styling and responsive design
-* **JavaScript** – Interactive features, DOM manipulation and validations
-* **JSON** – Storing and handling structured student data
-* **PHP** – Server-side processing and form handling
-* **MySQL** – Storing user and student data
-* **MySQLi** – Connecting PHP with MySQL database
-* **Visual Studio Code** – Development environment
-* **XAMPP** – Local PHP and MySQL server environment
-* **Git & GitHub** – Version control and project hosting
-
----
-
-## ⚙️ Technologies and Their Role
-
-### HTML5
-
-Used to create the structure and different pages of the Student Hub website.
-
-### CSS3
-
-Used for styling, layouts, navigation bars, cards, forms, buttons, and responsive design.
-
-### JavaScript
-
-Used for:
-
-* Form validation
-* DOM manipulation
-* Search functionality
-* Theme toggle
-* Dashboard interactions
-* Dynamic content updates
-* Local storage
-* Interactive components
-
-### JSON
-
-Used to store and manage structured data such as:
-
-* Student information
-
-### PHP
-
-Used for server-side operations such as:
-
-* Form processing
-* User registration
-* Backend validation
-* Database operations
-
-### MySQL
-
-Used to store user registration and student-related data.
-
-### MySQLi
-
-**MySQLi means MySQL Improved.** It is a PHP extension used to connect PHP applications with MySQL databases and perform database operations.
-
----
-
 ## 📚 Practical Work
 
-The Student Hub project was developed step-by-step from **Practical 1 to Practical 9**, including:
+The **Student Hub** project was developed progressively through **Practical 1 to Practical 14**. The complete project combines frontend development, JavaScript, JSON, PHP, MySQL, authentication, CRUD operations, event registration, APIs, and an admin dashboard.
 
-* HTML website structure and pages
-* CSS styling and responsive design
-* JavaScript and DOM manipulation
-* Form validation and regular expressions
-* JSON data handling
-* PHP form processing
-* MySQL database connection
-* User registration using PHP and MySQLi
-* Frontend and backend validation
-* Duplicate username and email checking
-* Secure password hashing using `password_hash()`
+### ✨ Key Implementations
 
----
-
-## 🔐 User Registration
-
-The registration system uses PHP, MySQL and MySQLi.
-
-Registration process:
-
-```text
-Registration Form
-       ↓
-    PHP Code
-       ↓
- Validate Input
-       ↓
-Check Username/Email
-       ↓
-  Hash Password
-       ↓
- Insert into MySQL
-       ↓
-Registration Successful
-````
-
-The system checks:
-
-* Empty fields
-* Valid email
-* Minimum password length
-* Duplicate username
-* Duplicate email
-* Secure password hashing
+- 🌐 HTML5 website structure and responsive design
+- 🎨 CSS3 styling and UI components
+- ⚡ JavaScript DOM manipulation and interactive features
+- ✅ Form validation and regular expressions
+- 📄 JSON data handling
+- 🐘 PHP server-side processing
+- 🗄️ MySQL database integration
+- 🔗 MySQLi and PDO database connections
+- 🔐 Secure user registration
+- 🚫 Duplicate username and email checking
+- 🔒 Password hashing
+- 🔑 Login and logout
+- 🧑‍💻 Session management
+- 👨‍💼 Admin and Student roles
+- 🛡️ Role-Based Access Control
+- 👨‍🎓 Student Management CRUD operations
+- 📅 Event Management CRUD operations
+- 🖼️ Event poster upload and validation
+- 📝 Event registration
+- 🔍 Search and filtering
+- 🔄 PHP JSON API
+- ⚡ AJAX/Fetch API operations
+- 📊 Dynamic database-based Admin Dashboard
+- 🕒 Latest registration display
+- 📝 Audit log management
+- 🧪 Final project integration and testing
 
 ---
 
 ## 🗄️ Database
 
-The project uses a MySQL database named:
+The project uses the following **MySQL database**:
 
 ```text
 studenthub
-```
 
-The `users` table stores information such as:
-
-```text
-id
-username
-email
-password
-created_at
-```
-
-Passwords are stored using secure password hashing.
-
----
-
-## 🚀 How to Run
-
-### For HTML, CSS and JavaScript
-
-1. Open the project in **Visual Studio Code**.
-2. Open `index.html`.
-3. Run it using **Live Server** or open it directly in a web browser.
-
-### For PHP and MySQL
-
-PHP requires a local server such as **XAMPP**.
-
-1. Install and open **XAMPP**.
-2. Start **Apache** from the XAMPP Control Panel.
-3. Start **MySQL** from the XAMPP Control Panel.
+📋 Main Database Tables
+- users
+- students
+- events
+- event_registrations
+- hobbies
+- student_hobbies
+- audit_logs
+🚀 How to Run
+Follow these steps to run the Student Hub project locally:
+1. Install and open XAMPP.
+2. Start Apache.
+3. Start MySQL.
 4. Place the project folder inside:
-
-```text
 C:\xampp\htdocs\
-```
 
-5. Open the project in your browser using:
-
-```text
-http://localhost/Student-Hub/
-```
-
-### phpMyAdmin
-
-Open:
-
-```text
+5. Open phpMyAdmin:
 http://localhost/phpmyadmin
-```
 
-Use the `studenthub` database for the PHP and MySQL functionality.
+6. Create/use the database:
+studenthub
 
----
+7. Import the required SQL files.
+8. Open the project in your browser:
+http://localhost/Student-Hub/
 
-## 💡 Implemented Features
+🔐 Authentication
+Student Hub supports two user roles:
+👨‍💼 Admin
+Admin can access:
+- 📊 Admin Dashboard
+- 👨‍🎓 Student Management
+- 📅 Event Management
+- 📝 Event Registrations
+- 📝 Audit Logs
+👨‍🎓 Student
+Students can access student-side features and are restricted from admin-only pages.
+🧪 Testing
+The complete project is tested for:
+- ✅ User registration
+- 🔑 Login and logout
+- 👨‍💼 Admin and Student roles
+- 🛡️ Role-Based Access Control
+- 🔐 Session management
+- 👨‍🎓 Student CRUD
+- 📅 Event CRUD
+- 📝 Event registration
+- 🔍 Search and filtering
+- 🖼️ Poster upload
+- 🔄 PHP JSON API
+- ⚡ AJAX/Fetch operations
+- 🗄️ Database operations
+- 📊 Admin Dashboard
+- 📝 Audit logs
+🌐 Important URLs
+Feature	URL
+🏠 Student Hub	http://localhost/Student-Hub/
+👨‍🎓 Student Management	http://localhost/Student-Hub/Practical-11/index.php
+📅 Event Management	http://localhost/Student-Hub/Practical-12/index.php
+📊 Admin Dashboard	http://localhost/Student-Hub/Practical-14/index.php
+🗄️ phpMyAdmin	http://localhost/phpmyadmin
 
-* ✅ HTML5 Website Structure
-* ✅ CSS3 Styling
-* ✅ Responsive Web Design
-* ✅ JavaScript Form Validation
-* ✅ DOM Manipulation
-* ✅ Dark/Light Theme Toggle
-* ✅ Search Functionality
-* ✅ Student Dashboard Interactions
-* ✅ Local Storage Support
-* ✅ JSON Data Handling
-* ✅ PHP Form Processing
-* ✅ MySQL Database Integration
-* ✅ MySQLi Database Connection
-* ✅ User Registration
-* ✅ Frontend Validation
-* ✅ Backend Validation
-* ✅ Duplicate Username Checking
-* ✅ Duplicate Email Checking
-* ✅ Password Hashing
 
----
+📦 GitHub Repository
+🔗 Student Hub Repository
+https://github.com/AD-9218/Student-Hub
 
-## 🔮 Future Improvements
-
-* 🔐 Secure Login and Logout System
-* 👨‍🏫 Faculty and Student Roles
-* ⏱️ Session Management
-* 📤 Assignment Upload System
-* 📊 Advanced Attendance Analytics
-* 🔔 Assignment and Event Notifications
-* 📱 Progressive Web App (PWA) Support
-
----
-
-## 👨‍💻 Developer
-
-**Anandi Dihora**
-
-Computer Engineering Student
-
----
-
-## 📜 License
-
+💡 Project Demo
+The final project demonstrates the complete Student Hub system, including:
+- 🔑 Student Login
+- 👨‍💼 Admin Login
+- 👨‍🎓 Student Management
+- 📅 Event Management
+- 📝 Event Registration
+- 🔄 JSON/AJAX Functionality
+- 📊 Admin Dashboard
+- 🛡️ Role-Based Access
+- 📝 Audit Logs
+- 🗄️ Database Integration
+👨‍💻 Developer
+Anandi Dihora
+🎓 Computer Engineering Student
+📜 License
 This project is developed for educational purposes.
 
-Feel free to use, modify, and improve it for learning.
+### ⭐ Why this version is better
 
-⭐ If you found this project useful, please consider giving it a **Star** on GitHub!
+- **More professional GitHub appearance**
+- Clear separation between **Practical Work, Database, Running, Authentication, Testing, URLs, Demo**
+- Uses emojis only where they actually improve readability
+- Database tables are clearly listed
+- URLs are presented in a clean table
+- Admin vs Student permissions are easy to understand
+- No unnecessary detailed explanation of every Practical
+- Still keeps **all the important features** you implemented
 
-```
-
-
+**One small correction:** In your original text, you wrote `http://localhost/Student-Hub/` as the project URL. That's correct **if `
