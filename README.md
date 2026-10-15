@@ -158,7 +158,7 @@ The project uses the following **MySQL database**:
 
 ## 🚀 How to Run
 
-Follow these steps to run the Student Hub project locally:
+Follow these steps to run the Student Hub project locally.
 
 ### 1️⃣ Install XAMPP
 
@@ -166,7 +166,7 @@ Install and open **XAMPP**.
 
 ### 2️⃣ Start Services
 
-Start the following services:
+Start:
 
 - Apache
 - MySQL
@@ -175,39 +175,60 @@ Start the following services:
 
 Place the project folder inside:
 
-```text
-C:\xampp\htdocs\
+`C:\xampp\htdocs\`
 
 The final project path should be:
-C:\xampp\htdocs\Student-Hub\
 
-4️⃣ Open phpMyAdmin
+`C:\xampp\htdocs\Student-Hub\`
+
+### 4️⃣ Open phpMyAdmin
+
 Open:
-http://localhost/phpmyadmin
 
-5️⃣ Create the Database
-Create or use the database:
-studenthub
+`http://localhost/phpmyadmin`
 
-6️⃣ Import SQL Files
-Import the required SQL files into the studenthub database.
-7️⃣ Open Student Hub
-Open the project in your browser:
-http://localhost/Student-Hub/
+### 5️⃣ Create the Database
 
-🔐 Authentication
-Student Hub supports two user roles:
-👨‍💼 Admin
+Create or use:
+
+`studenthub`
+
+### 6️⃣ Import SQL Files
+
+Import the required SQL files into the `studenthub` database.
+
+### 7️⃣ Open Student Hub
+
+Open:
+
+`http://localhost/Student-Hub/`
+
+---
+
+## 🔐 Authentication
+
+Student Hub supports **two user roles**.
+
+### 👨‍💼 Admin
+
 Admin can access:
+
 - 📊 Admin Dashboard
 - 👨‍🎓 Student Management
 - 📅 Event Management
 - 📝 Event Registrations
 - 📝 Audit Logs
-👨‍🎓 Student
-Students can access student-side features and are restricted from admin-only pages.
-🧪 Testing
+
+### 👨‍🎓 Student
+
+Students can access student-side features and are restricted from **admin-only pages**.
+
+---
+
+## 🧪 Testing
+
 The complete project is tested for:
+
 - ✅ User registration
 - 🔑 Login and logout
 - 👨‍💼 Admin and Student roles
@@ -223,20 +244,31 @@ The complete project is tested for:
 - 🗄️ Database operations
 - 📊 Admin Dashboard
 - 📝 Audit logs
-🌐 Important URLs
-Feature	URL
-🏠 Student Hub	http://localhost/Student-Hub/
-👨‍🎓 Student Management	http://localhost/Student-Hub/Practical-11/index.php
-📅 Event Management	http://localhost/Student-Hub/Practical-12/index.php
-📊 Admin Dashboard	http://localhost/Student-Hub/Practical-14/index.php
-🗄️ phpMyAdmin	http://localhost/phpmyadmin
 
+---
 
-📦 GitHub Repository
-🔗 Student Hub Repository
-Student Hub on GitHub
-💡 Project Demo
-The final project demonstrates the complete Student Hub system, including:
+## 🌐 Important URLs
+
+| Feature | URL |
+|---|---|
+| 🏠 Student Hub | `http://localhost/Student-Hub/` |
+| 👨‍🎓 Student Management | `http://localhost/Student-Hub/Practical-11/index.php` |
+| 📅 Event Management | `http://localhost/Student-Hub/Practical-12/index.php` |
+| 📊 Admin Dashboard | `http://localhost/Student-Hub/Practical-14/index.php` |
+| 🗄️ phpMyAdmin | `http://localhost/phpmyadmin` |
+
+---
+
+## 📦 GitHub Repository
+
+🔗 **[Student Hub Repository](https://github.com/AD-9218/Student-Hub)**
+
+---
+
+## 💡 Project Demo
+
+The final project demonstrates the complete **Student Hub system**, including:
+
 - 🔑 Student Login
 - 👨‍💼 Admin Login
 - 👨‍🎓 Student Management
@@ -247,19 +279,17 @@ The final project demonstrates the complete Student Hub system, including:
 - 🛡️ Role-Based Access
 - 📝 Audit Logs
 - 🗄️ Database Integration
-👨‍💻 Developer
- Anandi Dihora
+
+---
+
+## 👨‍💻 Developer
+
+**Anandi Dihora**
+
 🎓 Computer Engineering Student
-📜 License
-This project is developed for educational purposes.
 
-### ✅ This version fixes your problem
+---
 
-- No unwanted **“Why this version is better”** section.
-- Proper headings and spacing.
-- Database is presented as a **clean table**.
-- URLs are in a proper table.
-- Code blocks are correctly closed.
-- GitHub link is proper Markdown.
-- Developer section is clean.
-- README ends correctly at **License**.
+## 📜 License
+
+This project is developed for **educational purposes**.
